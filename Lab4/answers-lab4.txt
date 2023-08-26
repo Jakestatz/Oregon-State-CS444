@@ -1,0 +1,7 @@
+1. MPBOOTPHYS us used to calculate the physical address of the symbol passed to the macro. MPBOOTPHYS is necessary in kern/mpentry.S but not boot/boot.S because because boot.s should already know the physical address where the kernal is loaded.
+
+2. Each CPU needs its own kernal stack in order for them to run seperatly from each other. This is important becuase if they used the same stack one CPU could edit memory that the other CPU needs to access.
+
+3. e is the enviroment which is relative the the kernal address space, so changing environments does not affect the way the e is referenced.
+
+4. When the kernal swithces environments, it saves the old environment’s registers because they might be needed when returning back to the old environment. 

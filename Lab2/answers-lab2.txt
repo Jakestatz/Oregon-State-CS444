@@ -1,0 +1,20 @@
+1. In this section of code x should have uintptr_t type to be virtual.
+
+2. 
+
+1023	0xffc00000  Page table for top 4MB of phys memory
+1022	0xff800000  Page table for second to top
+.	    ?	          ?
+.	    ?	          ?
+.	    ?	          ?
+2	    0x00800000	Program Data & Heap
+1	    0x00400000	Empty Memory
+0	    0x00000000	Empty Memory
+
+3. The kernal memory is seperated from user level, because user level programs would be able to alter and currupt the kernal level memery causing crashes and faults. marking the kernal memory as read only for users makes sure that this does not happen.
+
+4. The maximum amount of physical memory for this operating system is 256MB stated in pmap.h. This is because we are alotted 64 pages of 4MB each.
+
+5. 
+
+6.

@@ -1,0 +1,7 @@
+1. The purpose of having an individual handler function for each exception/interrupt is that we are able to have diffent outcomes for each exception/interrupt. 
+
+2. The reason that vector 13 is produced instead of vector 14 is because vector 14 is a kernal page fault meaning the program would just end.
+
+3. The general protection fault would would be active if it was set to ring 0.
+
+4. The purpose of this setup is to make sure no one intrupts the kernals processes.
